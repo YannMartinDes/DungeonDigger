@@ -119,3 +119,13 @@ value = 5.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Button" type="Button" parent="UI"]
+margin_left = 1098.75
+margin_top = 687.0
+margin_right = 1232.75
+margin_bottom = 707.0
+text = "Regenerate"
+__meta__ = {
+"_edit_use_anchors_": false
+}

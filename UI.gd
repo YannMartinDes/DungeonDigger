@@ -7,11 +7,13 @@ func _ready():
 	$TurnLabel.text = "Steps before turn: 8"
 	$RoomLabel.text = "Room size: 2 - 5"
 	
-	# Connecte le signal "value_changed" du slider à cette instance
 	$Steps.connect("value_changed", self, "_on_slider_steps_value_changed")
 	$Turn.connect("value_changed", self, "_on_slider_turn_value_changed")
 	$MinRoom.connect("value_changed", self, "_on_min_slider_changed")
 	$MaxRoom.connect("value_changed", self, "_on_max_slider_changed")
+	
+	$Button.connect("pressed", get_node("../"), "generate_level")
+
 	
 func _on_slider_steps_value_changed(value):	
 	var world = get_node("../")  # parent is World
