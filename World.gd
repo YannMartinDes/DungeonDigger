@@ -1,18 +1,32 @@
 extends Node2D
 
-var borders = Rect2(1,1,38,21)
+var borders = Rect2(1,1,37,19)
+var steps_nb = 400  # This is exposed to the UI
+var steps_before_turn = 8  # This is exposed to the UI
+var room_min_size = 2
+var room_max_size = 5  # this will be controlled by the slider
 
-onready var tileMap = $TileMap
-
+onready var tileMap = $Dungeon
 
 func _ready():
 	randomize()
 	generate_level()
 	
-	
+func resetDungeon():
+	for x in range(borders.position.x, borders.end.x):
+		for y in range(borders.position.y, borders.end.y):
+			tileMap.set_cell(x, y, 0) 
+
 func generate_level():
-	var digger = Digger.new(Vector2(19,11), borders)
-	var map = digger.digs(500)
+	resetDungeon()  # í ¾í·¹ clear all previously set tiles
+	
+	var digger = Digger.new(Vector2(19,10), borders)
+	digger.room_min_size = room_min_size
+	digger.room_max_size = room_max_size
+	digger.steps_before_turn = steps_before_turn
+	digger.steps_nb = steps_nb
+	
+	var map = digger.digs()
 	digger.queue_free()
 	
 	for location in map:
@@ -22,4 +36,4 @@ func generate_level():
 
 func _input(event):
 	if event.is_action_pressed("ui_accept"):
-		get_tree().reload_current_scene()
+		generate_level()
