@@ -43,3 +43,5 @@ This project is based on the tutorial by HeartBeast:
 ![alt text](image-2.png)
 
 ![alt text](image-3.png)
+
+<img width="1276" height="752" alt="image" src="https://github.com/user-attachments/assets/49018607-5f7e-47e8-bb78-783e60163b84" />
