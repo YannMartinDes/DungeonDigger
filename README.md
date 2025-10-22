@@ -20,6 +20,11 @@ This project is based on the tutorial by HeartBeast:
 - Regenerate the dungeon either by pressing **Enter** or clicking the **Generate Dungeon** button.
 - Real-time adjustments with sliders for steps and room size.
 
+### Next steps
+- Add random on turn to create cave layout
+- Add Pillar in middle of room
+- Change the layout size 
+
 ## How to Run
 
 ### Using the executable
