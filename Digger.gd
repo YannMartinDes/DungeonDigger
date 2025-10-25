@@ -12,6 +12,7 @@ var steps_since_turn = 0
 
 var steps_nb
 var steps_before_turn
+var chance_to_turn
 var room_min_size
 var room_max_size
 
@@ -24,8 +25,11 @@ func _init(starting_position, new_borders):
 func digs():
 	create_room(position)
 	for step in steps_nb:
-		if steps_since_turn >= steps_before_turn:
-			change_direction()
+		var have_params = steps_before_turn != 0 || chance_to_turn != 0 
+		var chance_to_turn_draw = randi() % 100 + 1 # Returns random integer between 1 and 100
+		
+		if have_params && (steps_since_turn >= steps_before_turn || chance_to_turn_draw <= chance_to_turn):
+			change_direction() 
 			
 		if step():
 			steps_history.append(position)

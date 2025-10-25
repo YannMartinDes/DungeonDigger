@@ -3,6 +3,7 @@ extends Node2D
 var borders = Rect2(1,1,37,19)
 var steps_nb = 400  # This is exposed to the UI
 var steps_before_turn = 8  # This is exposed to the UI
+var chance_to_turn = 5  # This is exposed to the UI
 var room_min_size = 2
 var room_max_size = 5  # this will be controlled by the slider
 
@@ -24,6 +25,7 @@ func generate_level():
 	digger.room_min_size = room_min_size
 	digger.room_max_size = room_max_size
 	digger.steps_before_turn = steps_before_turn
+	digger.chance_to_turn = chance_to_turn
 	digger.steps_nb = steps_nb
 	
 	var map = digger.digs()

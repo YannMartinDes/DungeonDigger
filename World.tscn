@@ -44,7 +44,7 @@ script = ExtResource( 3 )
 [node name="Steps" type="HSlider" parent="UI"]
 margin_left = 22.0
 margin_top = 687.0
-margin_right = 317.0
+margin_right = 209.0
 margin_bottom = 703.0
 min_value = 50.0
 max_value = 1000.0
@@ -65,11 +65,10 @@ __meta__ = {
 }
 
 [node name="Turn" type="HSlider" parent="UI"]
-margin_left = 357.714
+margin_left = 235.0
 margin_top = 687.0
-margin_right = 631.714
+margin_right = 426.0
 margin_bottom = 703.0
-min_value = 3.0
 max_value = 15.0
 value = 8.0
 __meta__ = {
@@ -77,9 +76,31 @@ __meta__ = {
 }
 
 [node name="TurnLabel" type="Label" parent="UI"]
-margin_left = 357.714
+margin_left = 235.0
 margin_top = 662.749
-margin_right = 517.714
+margin_right = 395.0
+margin_bottom = 676.749
+rect_pivot_offset = Vector2( 180.113, 24.2507 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TurnChance" type="HSlider" parent="UI"]
+margin_left = 439.278
+margin_top = 687.0
+margin_right = 630.278
+margin_bottom = 703.0
+max_value = 100.0
+step = 5.0
+value = 5.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TurnChanceLabel" type="Label" parent="UI"]
+margin_left = 439.278
+margin_top = 662.749
+margin_right = 599.278
 margin_bottom = 676.749
 rect_pivot_offset = Vector2( 180.113, 24.2507 )
 __meta__ = {

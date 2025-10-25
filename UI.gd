@@ -5,10 +5,12 @@ func _ready():
 	
 	$StepLabel.text = "Steps: 400"
 	$TurnLabel.text = "Steps before turn: 8"
+	$TurnChanceLabel.text = "Chance to turn: 5%"
 	$RoomLabel.text = "Room size: 2 - 5"
 	
 	$Steps.connect("value_changed", self, "_on_slider_steps_value_changed")
 	$Turn.connect("value_changed", self, "_on_slider_turn_value_changed")
+	$TurnChance.connect("value_changed", self, "_on_slider_turn_chance_value_changed")
 	$MinRoom.connect("value_changed", self, "_on_min_slider_changed")
 	$MaxRoom.connect("value_changed", self, "_on_max_slider_changed")
 	
@@ -24,6 +26,11 @@ func _on_slider_turn_value_changed(value):
 	var world = get_node("../")  # parent is World
 	world.steps_before_turn = int(value)	
 	$TurnLabel.text = "Steps before turn: " + str(value)
+	
+func _on_slider_turn_chance_value_changed(value):	
+	var world = get_node("../")  # parent is World
+	world.chance_to_turn = int(value)	
+	$TurnChanceLabel.text = "Chance to turn: " + str(value)+"%"
 
 func _on_min_slider_changed(value):
 	var world = get_node("../")
