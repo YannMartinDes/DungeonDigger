@@ -24,7 +24,8 @@ This project is based on the tutorial by HeartBeast:
 ### Next steps
 - Add random on turn to create cave layout
 - Add Pillar in middle of room
-- Change the layout size 
+- Change the layout size
+- Add export to png of the generated dungeon
 
 ## How to Run
 
