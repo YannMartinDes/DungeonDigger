@@ -16,6 +16,7 @@ This project is based on the tutorial by HeartBeast:
 - Adjustable parameters via the UI:
   - **Number of steps** (`steps_nb`): controls how many steps the digger takes.
   - **Steps before turning**: how many steps the digger takes before changing direction.
+  - **Chance to turn**: the % of chance to turn at any step.
   - **Room size**: minimum and maximum size of rooms generated.
 - Regenerate the dungeon either by pressing **Enter** or clicking the **Generate Dungeon** button.
 - Real-time adjustments with sliders for steps and room size.
