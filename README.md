@@ -42,6 +42,7 @@ This project is based on the tutorial by HeartBeast:
 4. Adjust sliders and press **Generate Dungeon** or **Enter** to regenerate.
 
 ## Screenshots
+<img width="1548" height="930" alt="image" src="https://github.com/user-attachments/assets/000546a3-114f-490d-9052-f553444cf3e4" />
 
 ![alt text](image.png)
 
